@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>S12 · Another roadmap, different menus (Forward deployed engineer)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap">
+<style>
+*{box-sizing:border-box}body{margin:0}
+.f{font-family:Inter,sans-serif;color:#111;background:#fff;position:relative;min-height:100%;letter-spacing:-.005em}
+.mo{font-family:'JetBrains Mono',monospace}
+.tb{height:64px;border-bottom:1px solid #EAEAEE;display:flex;align-items:center;padding:0 28px;gap:18px;background:#fff}
+.lg{display:flex;align-items:center;gap:9px;font-weight:700;font-size:16px}.lg svg{width:26px;height:26px}
+.sep{width:1px;height:26px;background:#E4E4E9}
+.sw{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;padding:6px 10px;border-radius:10px}.sw small{font-size:13px;color:#6b6b75;font-weight:500}
+.ib{width:38px;height:38px;border-radius:50%;border:1px solid #E4E4E9;display:flex;align-items:center;justify-content:center;background:#fff;box-shadow:0 2px 0 #EEE;color:#333}
+.nv{display:flex;gap:26px;font-size:15px;font-weight:500;color:#44444f}.nv b{color:#111;font-weight:700}
+.btn{white-space:nowrap;height:40px;padding:0 20px;border-radius:20px;border:0;background:#222226;color:#fff;font:600 14px Inter,sans-serif;display:inline-flex;align-items:center;gap:8px;box-shadow:0 3px 0 #000}
+.btn.g{background:#fff;color:#111;border:1px solid #DADADF;box-shadow:0 3px 0 #E8E8EC}.btn.lg2{height:54px;padding:0 32px;border-radius:28px;font-size:17px;box-shadow:0 4px 0 #000}.btn.g.lg2{box-shadow:0 4px 0 #E8E8EC}
+.us{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;line-height:17px}.us small{display:block;color:#7a7a85;font-weight:500}.us i{width:34px;height:34px;border-radius:50%;background:#EEE;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:700}
+.shell{display:flex;min-height:calc(100% - 64px)}
+.sb{width:280px;border-right:1px solid #EAEAEE;padding:22px 14px;flex:none}
+.sl{font:600 11px 'JetBrains Mono',monospace;letter-spacing:.08em;color:#7a7a85;margin:20px 8px 8px}.sl:first-child{margin-top:0}
+.si{display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:10px;font-size:15px;font-weight:500;color:#33333c}.si.on{background:#F3F3F5;font-weight:700;color:#111}
+.si svg{width:18px;height:18px;stroke:#555;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.cu{display:flex;align-items:center;gap:10px;padding:8px 10px;font-size:14px;color:#33333c}.cu .n{font:12px 'JetBrains Mono',monospace;color:#8A8A94;width:18px}.cu .c{margin-left:auto;font:12px 'JetBrains Mono',monospace;color:#8A8A94}.cu.on{font-weight:700;color:#111}
+.op{margin:16px 6px;padding:12px 14px;border-radius:12px;background:#F7F7F9;font-size:13px}.op b{display:block;font-size:14px}.op span{color:#7a7a85;font-size:12px}
+.mn{flex:1;padding:28px 56px 60px;min-width:0}
+.pg{border:1px solid #EAEAEE;border-radius:14px;padding:16px 20px;display:flex;align-items:center;gap:20px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.pg .t{font:600 11px 'JetBrains Mono',monospace;letter-spacing:.08em;color:#7a7a85}.pg b{display:block;font-size:17px;margin:3px 0}.pg span{font-size:13px;color:#7a7a85}
+.hr{display:flex;justify-content:space-between;align-items:center;margin:40px 0 40px}
+.hr h1{font:700 40px/48px Inter,sans-serif;letter-spacing:-.03em;margin:0 0 12px;max-width:680px}.hr p{font:400 14px/24px 'JetBrains Mono',monospace;letter-spacing:-.01em;color:#55555f;max-width:600px;margin:0}
+.cv{width:170px;height:200px;border-radius:14px;background:#111;position:relative;flex:none;box-shadow:6px 6px 0 #E4E4E9}
+.sh{font:600 11px 'JetBrains Mono',monospace;letter-spacing:.08em;color:#7a7a85;margin:34px 0 12px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.cs{border:1px solid #EAEAEE;border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:600}.cs small{display:block;font:11px 'JetBrains Mono',monospace;color:#8A8A94;font-weight:400;margin-top:3px}.cs i{font:12px 'JetBrains Mono',monospace;color:#8A8A94;font-style:normal;margin-right:10px}
+.mh{display:flex;align-items:center;gap:14px;margin:40px 0 14px}.mh .n{font:12px 'JetBrains Mono',monospace;color:#8A8A94;background:#F3F3F5;border-radius:8px;padding:6px 8px}.mh b{font-size:16px}.mh small{display:block;font-size:12px;color:#7a7a85;margin-top:2px}
+.lc{border:1px solid #EAEAEE;border-radius:14px;padding:16px 18px;min-height:230px;display:flex;flex-direction:column;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.lc .no{font:12px 'JetBrains Mono',monospace;color:#8A8A94;display:flex;justify-content:space-between}.lc b{font-size:16px;line-height:22px;margin:12px 0 8px}
+.tg{display:inline-flex;align-items:center;gap:6px;font:11px 'JetBrains Mono',monospace;color:#7a7a85}.tg em{font-style:normal;background:#E6F4EA;color:#1E7A3C;border-radius:8px;padding:3px 8px;font-weight:600}.tg u{text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+.gl{margin-top:auto;height:96px;display:flex;align-items:center;justify-content:center}
+.cc{border:1px solid #EAEAEE;border-radius:16px;padding:18px;display:flex;gap:18px;align-items:flex-start;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.cc .cb{width:74px;height:98px;border-radius:8px;background:#111;flex:none;box-shadow:4px 4px 0 #E4E4E9;position:relative}
+.cc b{font-size:18px;display:block}.cc .m{font:12px 'JetBrains Mono',monospace;color:#7a7a85;margin:8px 0 4px}.cc .w{font-size:13px;color:#7a7a85}.cc .ft{display:flex;gap:8px;margin-top:12px}.cc .ft span{font:11px 'JetBrains Mono',monospace;background:#F3F3F5;border-radius:8px;padding:5px 9px;color:#555}.cc .bt{margin-left:auto;align-self:center}
+.mq{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:44px}.mq span{height:34px;padding:0 16px;border-radius:17px;border:1px solid #E4E4E9;display:flex;align-items:center;font:500 13px 'JetBrains Mono',monospace;color:#44444f}
+.hh{text-align:center;padding:90px 0 0}.hh .ey{display:inline-flex;gap:8px;align-items:center;font:600 12px 'JetBrains Mono',monospace;color:#555;border:1px solid #E4E4E9;border-radius:16px;padding:6px 14px}.hh .ey i{width:7px;height:7px;border-radius:50%;background:#2BAE5B}
+.hh h1{font:700 68px/76px Inter,sans-serif;letter-spacing:-.035em;margin:26px auto 22px;max-width:980px}.hh p{font-size:19px;line-height:29px;color:#55555f;max-width:640px;margin:0 auto}
+.sec{padding:0 120px;margin-top:100px}.sec h2{font-size:30px;letter-spacing:-.025em;margin:0 0 6px}.sec>p{color:#6b6b75;font-size:16px;margin:0 0 24px}
+.st3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.st3 div{border:1px solid #EAEAEE;border-radius:16px;padding:24px}.st3 .k{font:12px 'JetBrains Mono',monospace;color:#8A8A94}.st3 b{display:block;font-size:19px;margin:10px 0 6px}.st3 span{font-size:14px;line-height:22px;color:#55555f}
+.ov{position:absolute;inset:0;background:rgba(255,255,255,.6)}
+.dd{position:absolute;background:#fff;border:1px solid #E4E4E9;border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.12);padding:8px;width:360px}
+.dd .it{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;font-size:14px;font-weight:600}.dd .it small{display:block;font-weight:400;color:#7a7a85;font-size:12px;margin-top:2px}.dd .it.on{background:#F3F3F5}.dd .it .ck{margin-left:auto}
+.mg{position:absolute;inset:0;background:rgba(17,17,20,.35);display:flex;align-items:center;justify-content:center}.md{width:440px;background:#fff;border-radius:18px;padding:30px;box-shadow:0 16px 48px rgba(0,0,0,.2)}
+.md h3{font-size:22px;margin:0 0 8px;letter-spacing:-.02em}.md p{margin:0 0 20px;color:#6b6b75;font-size:15px;line-height:23px}
+
+.si.on{background:#EEEBFF;color:#3F31C4}.si.c1 svg{stroke:#5B4BF0}.si.c2 svg{stroke:#E0700F}.si.c3 svg{stroke:#1E9B5C}.si.c4 svg{stroke:#2F6BEA}.si.on svg{stroke:#5B4BF0}
+.cu.on{color:#3F31C4}.cu.on .n{color:#5B4BF0}
+.lc .gl{background:var(--t,#F6F6F8);border-radius:12px;height:104px}
+.hh .ey{background:#F4F2FF;border-color:#DCD6FF;color:#4E41D4}.hh h1 em{font-style:normal;color:#5B4BF0}
+.st3 .k{color:#fff;background:var(--k,#5B4BF0);display:inline-flex;width:30px;height:30px;border-radius:9px;align-items:center;justify-content:center;font-weight:600}
+.pg{border-left:4px solid #5B4BF0}.tg em{background:#DFF5E8}
+.mh .n{background:#EEEBFF;color:#4E41D4}
+.ft2{padding:34px 120px;display:flex;justify-content:space-between;color:#8A8A94;font-size:13px;border-top:1px solid #EAEAEE;margin-top:100px}
+
+.sp{padding:36px 34px;font-family:Inter,sans-serif;color:#111;background:#fff;height:100%}
+.sp .k{font:600 11px 'JetBrains Mono',monospace;letter-spacing:.08em;color:#8A8A94;margin:26px 0 10px}.sp .k:first-child{margin-top:0}
+.sp h3{font-size:22px;margin:4px 0 0;letter-spacing:-.02em}.sp p{margin:6px 0 0;font-size:15px;line-height:23px;color:#44444f}
+.sp ol{margin:0;padding:0;list-style:none;counter-reset:s}.sp ol li{counter-increment:s;display:flex;gap:12px;font-size:15px;line-height:22px;margin-bottom:12px;color:#222}
+.sp ol li:before{content:counter(s);width:24px;height:24px;border-radius:50%;background:#111;color:#fff;font:600 12px Inter;display:flex;align-items:center;justify-content:center;flex:none;margin-top:-1px}
+.sp ul{margin:0;padding:0;list-style:none}.sp ul li{font-size:14px;line-height:21px;color:#33333c;padding:7px 0;border-top:1px solid #F0F0F4}.sp ul li:first-child{border-top:0}
+.sp .nx{display:flex;gap:8px;flex-wrap:wrap}.sp .nx span{font:600 12px 'JetBrains Mono',monospace;border:1px solid #DADADF;border-radius:8px;padding:6px 10px;background:#FAFAFB}
+.sp .tag{display:inline-block;font:600 11px 'JetBrains Mono',monospace;background:#F3F3F5;border-radius:8px;padding:4px 9px;color:#555}
+.fm{padding:50px 60px;font-family:Inter,sans-serif;color:#111;background:#fff;height:100%}
+.fm h2{font-size:34px;letter-spacing:-.03em;margin:0 0 6px}.fm>p{margin:0 0 30px;color:#6b6b75;font-size:16px}
+.fr{display:flex;align-items:stretch;gap:14px;margin-bottom:14px}
+.nb{flex:1;border:1px solid #E4E4E9;border-radius:14px;padding:14px 16px;background:#fff;min-width:0;position:relative}.nb .n{font:600 11px 'JetBrains Mono',monospace;color:#8A8A94}.nb b{display:block;font-size:15px;margin:4px 0 3px}.nb span{font-size:12px;color:#6b6b75;line-height:17px;display:block}
+.nb.d{border-color:#1E7A3C;box-shadow:0 3px 0 #BFE3CB}.nb.p{border-color:#B7791F;box-shadow:0 3px 0 #F0DDB5}.nb.t{background:#FAFAFB;border-style:dashed}
+.ar{display:flex;align-items:center;color:#8A8A94;font-size:18px}
+.lg3{display:flex;gap:22px;margin:6px 0 24px;font-size:13px;color:#44444f}.lg3 i{display:inline-block;width:12px;height:12px;border-radius:4px;border:2px solid;margin-right:7px;vertical-align:-1px}
+.br{font:600 11px 'JetBrains Mono',monospace;color:#8A8A94;margin:2px 0 10px}
+
+.ah{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;border-bottom:1px solid #EAEAEE;font-family:Inter,sans-serif}
+.ah .lg{display:flex;align-items:center;gap:10px;font-weight:600;font-size:16px}.ah .lg svg{width:26px;height:26px}
+.ah a{font-size:14px;color:#55555f}
+.ab{display:flex;justify-content:center;padding-top:70px;font-family:Inter,sans-serif;color:#111;background:linear-gradient(#FAF9FF,#fff 320px)}
+.ac{width:440px;background:#fff;border:1px solid #E6E6EC;border-radius:20px;padding:36px 34px;box-shadow:0 10px 30px rgba(60,40,160,.07)}
+.ac .ic{width:52px;height:52px;border-radius:15px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;background:var(--c,#EEEBFF)}
+.ac .ic svg{width:26px;height:26px;fill:none;stroke:var(--s,#5B4BF0);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ac h1{font-size:28px;letter-spacing:-.025em;margin:0 0 8px}.ac p.s{margin:0 0 24px;color:#5b5b66;font-size:15px;line-height:22px}
+.gb{display:flex;align-items:center;justify-content:center;gap:10px;height:50px;border:1px solid #D9D9E0;border-radius:14px;font-weight:600;font-size:15px;box-shadow:0 2px 0 #E4E4EA;background:#fff;width:100%}
+.or{display:flex;align-items:center;gap:12px;margin:20px 0;color:#8A8A94;font:500 12px 'JetBrains Mono',monospace}.or:before,.or:after{content:"";flex:1;height:1px;background:#EAEAEE}
+.fl{font-size:13px;font-weight:600;margin-bottom:7px;display:block}
+.fi{height:50px;border:1.5px solid #D9D9E0;border-radius:12px;padding:0 14px;display:flex;align-items:center;font-size:15px;color:#9a9aa4;background:#fff}
+.fi.fo{border-color:#5B4BF0;box-shadow:0 0 0 4px #EEEBFF;color:#111}.fi.e{border-color:#D93A3A;box-shadow:0 0 0 4px #FDE8E8}
+.pb{margin-top:16px;width:100%;height:52px;justify-content:center;font-size:16px}
+.cs{margin-top:18px;font-size:12px;line-height:18px;color:#8A8A94;text-align:center}.cs u{color:#55555f}
+.sw{margin-top:20px;text-align:center;font-size:14px;color:#55555f}.sw b{color:#4E41D4}
+.otp{display:flex;gap:10px;justify-content:space-between}.otp div{width:56px;height:64px;border:1.5px solid #D9D9E0;border-radius:14px;display:flex;align-items:center;justify-content:center;font:600 26px 'JetBrains Mono',monospace}
+.otp div.fo{border-color:#5B4BF0;box-shadow:0 0 0 4px #EEEBFF}.otp.e div{border-color:#D93A3A;background:#FFF6F6;color:#B42323}
+.er{display:flex;gap:10px;align-items:flex-start;background:#FDECEC;color:#9B1C1C;border-radius:12px;padding:12px 14px;font-size:14px;line-height:20px;margin-top:14px}
+.er svg{width:18px;height:18px;flex:none;margin-top:1px;fill:none;stroke:#D93A3A;stroke-width:2;stroke-linecap:round}
+.wn{background:#FFF4E0;color:#8A5300}.wn svg{stroke:#E0700F}
+.lk{text-align:center;margin-top:18px;font-size:14px;color:#55555f}.lk b{color:#4E41D4}
+.sp2{width:46px;height:46px;border-radius:50%;border:5px solid #EEEBFF;border-top-color:#5B4BF0;margin:6px auto 22px}
+.ck2{display:flex;align-items:center;gap:12px;padding:12px 0;font-size:15px;border-top:1px solid #F0F0F4}.ck2:first-of-type{border-top:0}
+.ck2 i{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:600 13px Inter;font-style:normal;flex:none}
+.ck2 .dn{background:#E4F6EC;color:#1E9B5C}.ck2 .ng{border:5px solid #EEEBFF;border-top-color:#5B4BF0}.ck2 .wt{background:#F3F3F5;color:#aaa}
+.wsr{display:flex;align-items:center;gap:14px;border:1.5px solid #E4E4EA;border-radius:14px;padding:14px;margin-bottom:12px}.wsr.on{border-color:#5B4BF0;background:#FAF9FF}
+.wsr .av{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff}.wsr small{display:block;color:#6b6b75;font-size:13px;margin-top:2px}
+.pgm{height:8px;border-radius:6px;background:#EEEEF2;margin:4px 0 8px;overflow:hidden}.pgm i{display:block;height:100%;background:#5B4BF0;border-radius:6px}
+
+.cm{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;font:500 12.5px 'JetBrains Mono',monospace;letter-spacing:-.01em;color:#33333c;font-weight:500}.cm.o{background:#F6F5FF;color:#3F31C4;font-weight:600}.cm .n{font:500 11px 'JetBrains Mono',monospace;color:#8A8A94;width:18px}.cm.o .n{color:#5B4BF0}.cm .c{margin-left:auto;font:500 11px 'JetBrains Mono',monospace;color:#8A8A94}.cm .ch{width:14px;height:14px;flex:none;stroke:#8A8A94;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:none}.cm.o .ch{transform:rotate(90deg);stroke:#5B4BF0}
+.ll{margin:2px 0 8px 18px;border-left:1.5px solid #E6E6EC;padding-left:6px}.ll .li{display:flex;align-items:center;gap:9px;padding:6px 8px;border-radius:7px;font:400 12px/17px 'JetBrains Mono',monospace;letter-spacing:-.015em;color:#44444f}.ll .li.on{background:#EEEBFF;color:#3F31C4;font-weight:600}.ll .li i{width:14px;height:14px;border-radius:50%;border:1.5px solid #CFCFD8;flex:none;font:700 9px Inter;color:#fff;font-style:normal;display:flex;align-items:center;justify-content:center}.ll .li i.d{background:#1E9B5C;border-color:#1E9B5C}.ll .li.on i{border-color:#5B4BF0}
+
+.sb .gl2{font:600 11px 'JetBrains Mono',monospace;letter-spacing:.08em;color:#8A8A94;margin:18px 12px 6px}
+.sbf{position:absolute;left:0;bottom:0;width:279px;padding:12px 16px;border-top:1px solid #EAEAEE;background:#fff;font:500 11px 'JetBrains Mono',monospace;color:#6b6b75}
+.sbf i{display:block;height:5px;border-radius:4px;background:#EEEEF2;margin-top:7px}.sbf i b{display:block;height:100%;background:#5B4BF0;border-radius:4px}
+.us2{display:flex;align-items:center;gap:10px}.us2 i{width:34px;height:34px;border-radius:50%;background:#EEEBFF;color:#4E41D4;font-style:normal;font-weight:700;display:flex;align-items:center;justify-content:center}.us2 div{font-size:13px;font-weight:600}.us2 small{display:block;font-weight:400;color:#8A8A94;font-size:12px}
+.pg b.dn{color:#1E7A3C}
+</style>
+</helmet>
+<div class="f" style="position:relative;height:1500px"><div class="tb"><div class="lg"><svg viewBox="0 0 28 28" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="14" r="3" fill="#111"></circle><circle cx="22" cy="6" r="3"></circle><circle cx="22" cy="22" r="3"></circle><path d="M9 13l10-6M9 15l10 6"></path></svg> Pathwisse <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#777" stroke-width="1.6" stroke-linecap="round"><path d="M3 4.5 6 7.5 9 4.5"></path></svg></div><div class="sep"></div><div class="sw"><span class="ib" style="width:28px;height:28px;border-radius:8px;box-shadow:none"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2"><path d="M6 21V4M6 5h11l-2.5 4L17 13H6"></path></svg></span>Forward deployed engineer <small>Roadmap</small><svg width="12" height="14" viewBox="0 0 12 14" fill="none" stroke="#777" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5l3-3 3 3M3 9l3 3 3-3"></path></svg></div><span style="margin-left:auto"></span><span class="ib"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l4 4"></path></svg></span><span class="ib"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14A8 8 0 0 1 10 4a8 8 0 1 0 10 10z"></path></svg></span><div class="us2"><i>A</i><div>Ada<small>Free plan</small></div></div></div><div class="shell"><aside class="sb" style="padding-bottom:70px"><div class="gl2">FORWARD DEPLOYED ENGINEER WORKSPACE</div><div class="si on c1"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v9H4z"></path></svg>Overview</div><div class="gl2">PRACTICE</div><div class="si  c2"><svg viewBox="0 0 24 24"><path d="M4 20V8l8-4 8 4v12zM9 20v-6h6v6"></path></svg>Client scenarios</div><div class="si  c3"><svg viewBox="0 0 24 24"><path d="M3.5 8h17v11h-17zM9 8V5h6v3"></path></svg>Projects</div><div class="gl2">LIBRARY</div><div class="si  c4"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 9h8M8 13h5"></path></svg>Playbooks</div><div class="si  c1"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6zM14 3v5h5"></path></svg>Handoff templates</div><div class="gl2">COMMUNITY</div><div class="si  c2"><svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="3"></circle><path d="M3 19c0-3 2.700-5 6-5s6 2 6 5M16 6.500a3 3 0 0 1 0 5.500"></path></svg>Community</div><div class="gl2">CURRICULUM</div><div class="cm o"><svg class="ch" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg><span class="n">01</span>Python programming<span class="c">0/12</span></div><div class="ll"><div class="li on"><i class=""></i>Variables, values and types</div><div class="li "><i class=""></i>Conditions and Boolean logic</div><div class="li "><i class=""></i>Loops and iteration</div><div class="li "><i class=""></i>Functions and collections</div><div class="li "><i class=""></i>Strings and structured files</div><div class="li "><i class=""></i>Modules, imports and packages</div><div class="li "><i class=""></i>Exceptions, validation and error handling</div><div class="li "><i class=""></i>Classes, type hints and CLI apps</div><div class="li "><i class=""></i>Program architecture and maintainability</div><div class="li "><i class=""></i>Dependencies, configuration and logging</div><div class="li "><i class=""></i>Performance and resource trade-offs</div><div class="li "><i class=""></i>Customer-style tool delivery</div></div><div class="cm "><svg class="ch" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg><span class="n">02</span>APIs and integration<span class="c">0/12</span></div><div class="cm "><svg class="ch" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg><span class="n">03</span>Discovery and scoping<span class="c">0/12</span></div><div class="cm "><svg class="ch" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg><span class="n">04</span>Communication and handoff<span class="c">0/12</span></div><div class="sbf">0 / 48 UNDERSTOOD<i><b style="width:0%"></b></i></div></aside><main class="mn"><div class="pg"><div style="flex:1"><div class="t">YOUR PROGRESS</div><b>Nothing finished yet.</b><span>Complete one quick lesson to start your streak. 0 of 48 lessons.</span></div><button class="btn">Start: Variables, values and types →</button></div><div class="hr"><div><h1>Forward deployed engineer, from first principles.</h1><p>Take AI into customer environments: scope, integrate and hand off. 4 modules, 48 lessons, each with a hands-on tool, a practice and a teach-back.</p></div><div class="cv" style="background:#E0700F;display:flex;align-items:center;justify-content:center"><svg width="92" height="92" viewBox="0 0 96 96" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="48" r="10"></circle><circle cx="68" cy="28" r="10"></circle><circle cx="68" cy="68" r="10"></circle><path d="M37 44l22-12M37 52l22 12"></path></svg></div></div><div class="sh">CURRICULUM STRUCTURE</div><div class="g3"><div class="cs"><div>Python programming<small>12 LESSONS</small></div><i>01 →</i></div><div class="cs"><div>APIs and integration<small>12 LESSONS</small></div><i>02 →</i></div><div class="cs"><div>Discovery and scoping<small>12 LESSONS</small></div><i>03 →</i></div><div class="cs"><div>Communication and handoff<small>12 LESSONS</small></div><i>04 →</i></div></div><div class="mh"><span class="n">01</span><div><b>Python programming</b><small>12 lessons</small></div></div><div class="g3"><div class="lc"><div class="no"><span>01.01</span><span>→</span></div><b>Variables, values and types</b><span class="tg">30 min</span><div class="gl" style="--t:#EEEBFF"><svg width="88" height="88" viewBox="0 0 96 96" fill="none" stroke="#5B4BF0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="48" cy="48" r="30"></circle><circle cx="48" cy="48" r="14"></circle></svg></div></div><div class="lc"><div class="no"><span>01.02</span><span>→</span></div><b>Conditions and Boolean logic</b><span class="tg">30 min</span><div class="gl" style="--t:#FFF0E0"><svg width="88" height="88" viewBox="0 0 96 96" fill="none" stroke="#E0700F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="20" y="20" width="56" height="56" rx="8"></rect><path d="M20 48h56M48 20v56"></path></svg></div></div><div class="lc"><div class="no"><span>01.03</span><span>→</span></div><b>Loops and iteration</b><span class="tg">30 min</span><div class="gl" style="--t:#E4F6EC"><svg width="88" height="88" viewBox="0 0 96 96" fill="none" stroke="#1E9B5C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 72 40 28l16 28 12-18 12 34z"></path></svg></div></div></div><div class="mh"><span class="n">02</span><div><b>APIs and integration</b><small>12 lessons</small></div></div><div class="g3"><div class="lc"><div class="no"><span>02.01</span><span>→</span></div><b>HTTP requests, responses and methods</b><span class="tg">30 min</span><div class="gl" style="--t:#FFE9F1"><svg width="88" height="88" viewBox="0 0 96 96" fill="none" stroke="#D93A78" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="48" r="10"></circle><circle cx="68" cy="28" r="10"></circle><circle cx="68" cy="68" r="10"></circle><path d="M37 44l22-12M37 52l22 12"></path></svg></div></div><div class="lc"><div class="no"><span>02.02</span><span>→</span></div><b>URLs, headers and status codes</b><span class="tg">30 min</span><div class="gl" style="--t:#E3EEFF"><svg width="88" height="88" viewBox="0 0 96 96" fill="none" stroke="#2F6BEA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 30h60M18 48h44M18 66h28"></path><circle cx="74" cy="66" r="8"></circle></svg></div></div><div class="lc"><div class="no"><span>02.03</span><span>→</span></div><b>REST resources and JSON contracts</b><span class="tg">30 min</span><div class="gl" style="--t:#E0F4F8"><svg width="88" height="88" viewBox="0 0 96 96" fill="none" stroke="#0E8FAD" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M48 16l30 17v30L48 80 18 63V33z"></path><path d="M18 33l30 17 30-17M48 50v30"></path></svg></div></div></div></main></div></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1500}}'>
+class Component extends DCLogic { renderVals() { return {}; } }
+</script>
+</body>
+</html>

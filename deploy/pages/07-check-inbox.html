@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pathwisse · Check your inbox</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/shared.css">
+</head>
+<body>
+<div style="height:56.25rem;background:#fff;position:relative"><div class="ah"><a class="lg" href="01-welcome.html" style="color:#111"><svg viewBox="0 0 28 28" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="14" r="3" fill="#111"></circle><circle cx="22" cy="6" r="3"></circle><circle cx="22" cy="22" r="3"></circle><path d="M9 13l10-6M9 15l10 6"></path></svg> Pathwisse</a><a href="01-welcome.html">Back to browsing</a></div><div class="ab" style="height:52.25rem"><div class="ac" style="align-self:flex-start"><div class="ic" style="--c:#EEEBFF;--s:#5B4BF0"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"></rect><path d="M3 8l9 6 9-6"></path></svg></div><h1>Check your inbox</h1><p class="s">We sent a magic link to <b style="color:#111" id="inboxEmail">you@college.edu</b>. Open the newest link in this same browser. It works once and expires in 15 minutes.</p><a class="btn pb" style="margin-top:0" href="08-magic-link-email.html">Open Gmail <span style="opacity:.7">↗</span></a><a class="btn g pb" style="margin-top:0.75rem" href="08-magic-link-email.html">Open your mail app</a><div class="or">OR</div><a class="gb" href="javascript:void(0)" onclick="PW.useGoogle(event)"><svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M22 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.6a4.8 4.8 0 0 1-2.1 3.1v2.6h3.4c2-1.8 3.1-4.5 3.1-7.6z"></path><path fill="#34A853" d="M12 22.5c2.8 0 5.2-.9 6.9-2.5l-3.4-2.6c-.9.6-2.1 1-3.5 1-2.7 0-5-1.800-5.800-4.300H2.700v2.700A10.500 10.500 0 0 0 12 22.500z"></path><path fill="#FBBC05" d="M6.200 14.100a6.300 6.300 0 0 1 0-4.100V7.300H2.700a10.500 10.500 0 0 0 0 9.500z"></path><path fill="#EA4335" d="M12 5.800c1.500 0 2.800.5 3.900 1.500l2.900-2.900A10.500 10.500 0 0 0 2.700 7.300l3.500 2.700C7 7.600 9.300 5.800 12 5.800z"></path></svg> Continue with Google</a><div class="lk">Didn't get it? Check spam, or <b>request another link</b></div><a class="lk" style="display:block;margin-top:0.5rem" href="06-log-in.html"><b>Use a different email</b></a></div></div></div>
+<script defer src="../assets/app.js"></script>
+<script>try{var pwe=localStorage.getItem('pw_pending_email');if(pwe){document.getElementById('inboxEmail').textContent=pwe;}}catch(err){}</script>
+</body>
+</html>

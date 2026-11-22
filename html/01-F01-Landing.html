@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>S01 · Welcome</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap">
+<style>
+*{box-sizing:border-box}body{margin:0}
+.f{font-family:Inter,sans-serif;color:#111;background:#fff;position:relative;min-height:100%;letter-spacing:-.005em}
+.mo{font-family:'JetBrains Mono',monospace}
+.tb{height:64px;border-bottom:1px solid #EAEAEE;display:flex;align-items:center;padding:0 28px;gap:18px;background:#fff}
+.lg{display:flex;align-items:center;gap:9px;font-weight:700;font-size:16px}.lg svg{width:26px;height:26px}
+.sep{width:1px;height:26px;background:#E4E4E9}
+.sw{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;padding:6px 10px;border-radius:10px}.sw small{font-size:13px;color:#6b6b75;font-weight:500}
+.ib{width:38px;height:38px;border-radius:50%;border:1px solid #E4E4E9;display:flex;align-items:center;justify-content:center;background:#fff;box-shadow:0 2px 0 #EEE;color:#333}
+.nv{display:flex;gap:26px;font-size:15px;font-weight:500;color:#44444f}.nv b{color:#111;font-weight:700}
+.btn{white-space:nowrap;height:40px;padding:0 20px;border-radius:20px;border:0;background:#222226;color:#fff;font:600 14px Inter,sans-serif;display:inline-flex;align-items:center;gap:8px;box-shadow:0 3px 0 #000}
+.btn.g{background:#fff;color:#111;border:1px solid #DADADF;box-shadow:0 3px 0 #E8E8EC}.btn.lg2{height:54px;padding:0 32px;border-radius:28px;font-size:17px;box-shadow:0 4px 0 #000}.btn.g.lg2{box-shadow:0 4px 0 #E8E8EC}
+.us{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;line-height:17px}.us small{display:block;color:#7a7a85;font-weight:500}.us i{width:34px;height:34px;border-radius:50%;background:#EEE;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:700}
+.shell{display:flex;min-height:calc(100% - 64px)}
+.sb{width:280px;border-right:1px solid #EAEAEE;padding:22px 14px;flex:none}
+.sl{font:600 11px 'JetBrains Mono',monospace;letter-spacing:.08em;color:#7a7a85;margin:20px 8px 8px}.sl:first-child{margin-top:0}
+.si{display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:10px;font-size:15px;font-weight:500;color:#33333c}.si.on{background:#F3F3F5;font-weight:700;color:#111}
+.si svg{width:18px;height:18px;stroke:#555;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.cu{display:flex;align-items:center;gap:10px;padding:8px 10px;font-size:14px;color:#33333c}.cu .n{font:12px 'JetBrains Mono',monospace;color:#8A8A94;width:18px}.cu .c{margin-left:auto;font:12px 'JetBrains Mono',monospace;color:#8A8A94}.cu.on{font-weight:700;color:#111}
+.op{margin:16px 6px;padding:12px 14px;border-radius:12px;background:#F7F7F9;font-size:13px}.op b{display:block;font-size:14px}.op span{color:#7a7a85;font-size:12px}
+.mn{flex:1;padding:28px 56px 60px;min-width:0}
+.pg{border:1px solid #EAEAEE;border-radius:14px;padding:16px 20px;display:flex;align-items:center;gap:20px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.pg .t{font:600 11px 'JetBrains Mono',monospace;letter-spacing:.08em;color:#7a7a85}.pg b{display:block;font-size:17px;margin:3px 0}.pg span{font-size:13px;color:#7a7a85}
+.hr{display:flex;justify-content:space-between;align-items:center;margin:40px 0 40px}
+.hr h1{font:700 40px/48px Inter,sans-serif;letter-spacing:-.03em;margin:0 0 12px;max-width:680px}.hr p{font-size:16px;line-height:25px;color:#55555f;max-width:560px;margin:0}
+.cv{width:170px;height:200px;border-radius:14px;background:#111;position:relative;flex:none;box-shadow:6px 6px 0 #E4E4E9}
+.sh{font:600 11px 'JetBrains Mono',monospace;letter-spacing:.08em;color:#7a7a85;margin:34px 0 12px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.cs{border:1px solid #EAEAEE;border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:600}.cs small{display:block;font:11px 'JetBrains Mono',monospace;color:#8A8A94;font-weight:400;margin-top:3px}.cs i{font:12px 'JetBrains Mono',monospace;color:#8A8A94;font-style:normal;margin-right:10px}
+.mh{display:flex;align-items:center;gap:14px;margin:40px 0 14px}.mh .n{font:12px 'JetBrains Mono',monospace;color:#8A8A94;background:#F3F3F5;border-radius:8px;padding:6px 8px}.mh b{font-size:16px}.mh small{display:block;font-size:12px;color:#7a7a85;margin-top:2px}
+.lc{border:1px solid #EAEAEE;border-radius:14px;padding:16px 18px;min-height:230px;display:flex;flex-direction:column;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.lc .no{font:12px 'JetBrains Mono',monospace;color:#8A8A94;display:flex;justify-content:space-between}.lc b{font-size:16px;line-height:22px;margin:12px 0 8px}
+.tg{display:inline-flex;align-items:center;gap:6px;font:11px 'JetBrains Mono',monospace;color:#7a7a85}.tg em{font-style:normal;background:#E6F4EA;color:#1E7A3C;border-radius:8px;padding:3px 8px;font-weight:600}.tg u{text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+.gl{margin-top:auto;height:96px;display:flex;align-items:center;justify-content:center}
+.cc{border:1px solid #EAEAEE;border-radius:16px;padding:18px;display:flex;gap:18px;align-items:flex-start;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.cc .cb{width:74px;height:98px;border-radius:8px;background:#111;flex:none;box-shadow:4px 4px 0 #E4E4E9;position:relative}
+.cc b{font-size:18px;display:block}.cc .m{font:12px 'JetBrains Mono',monospace;color:#7a7a85;margin:8px 0 4px}.cc .w{font-size:13px;color:#7a7a85}.cc .ft{display:flex;gap:8px;margin-top:12px}.cc .ft span{font:11px 'JetBrains Mono',monospace;background:#F3F3F5;border-radius:8px;padding:5px 9px;color:#555}.cc .bt{margin-left:auto;align-self:center}
+.mq{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:44px}.mq span{height:34px;padding:0 16px;border-radius:17px;border:1px solid #E4E4E9;display:flex;align-items:center;font:500 13px 'JetBrains Mono',monospace;color:#44444f}
+.hh{text-align:center;padding:90px 0 0}.hh .ey{display:inline-flex;gap:8px;align-items:center;font:600 12px 'JetBrains Mono',monospace;color:#555;border:1px solid #E4E4E9;border-radius:16px;padding:6px 14px}.hh .ey i{width:7px;height:7px;border-radius:50%;background:#2BAE5B}
+.hh h1{font:700 68px/76px Inter,sans-serif;letter-spacing:-.035em;margin:26px auto 22px;max-width:980px}.hh p{font-size:19px;line-height:29px;color:#55555f;max-width:640px;margin:0 auto}
+.sec{padding:0 120px;margin-top:100px}.sec h2{font-size:30px;letter-spacing:-.025em;margin:0 0 6px}.sec>p{color:#6b6b75;font-size:16px;margin:0 0 24px}
+.st3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.st3 div{border:1px solid #EAEAEE;border-radius:16px;padding:24px}.st3 .k{font:12px 'JetBrains Mono',monospace;color:#8A8A94}.st3 b{display:block;font-size:19px;margin:10px 0 6px}.st3 span{font-size:14px;line-height:22px;color:#55555f}
+.ov{position:absolute;inset:0;background:rgba(255,255,255,.6)}
+.dd{position:absolute;background:#fff;border:1px solid #E4E4E9;border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.12);padding:8px;width:360px}
+.dd .it{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;font-size:14px;font-weight:600}.dd .it small{display:block;font-weight:400;color:#7a7a85;font-size:12px;margin-top:2px}.dd .it.on{background:#F3F3F5}.dd .it .ck{margin-left:auto}
+.mg{position:absolute;inset:0;background:rgba(17,17,20,.35);display:flex;align-items:center;justify-content:center}.md{width:440px;background:#fff;border-radius:18px;padding:30px;box-shadow:0 16px 48px rgba(0,0,0,.2)}
+.md h3{font-size:22px;margin:0 0 8px;letter-spacing:-.02em}.md p{margin:0 0 20px;color:#6b6b75;font-size:15px;line-height:23px}
+
+.si.on{background:#EEEBFF;color:#3F31C4}.si.c1 svg{stroke:#5B4BF0}.si.c2 svg{stroke:#E0700F}.si.c3 svg{stroke:#1E9B5C}.si.c4 svg{stroke:#2F6BEA}.si.on svg{stroke:#5B4BF0}
+.cu.on{color:#3F31C4}.cu.on .n{color:#5B4BF0}
+.lc .gl{background:var(--t,#F6F6F8);border-radius:12px;height:104px}
+.hh .ey{background:#F4F2FF;border-color:#DCD6FF;color:#4E41D4}.hh h1 em{font-style:normal;color:#5B4BF0}
+.st3 .k{color:#fff;background:var(--k,#5B4BF0);display:inline-flex;width:30px;height:30px;border-radius:9px;align-items:center;justify-content:center;font-weight:600}
+.pg{border-left:4px solid #5B4BF0}.tg em{background:#DFF5E8}
+.mh .n{background:#EEEBFF;color:#4E41D4}
+.ft2{padding:34px 120px;display:flex;justify-content:space-between;color:#8A8A94;font-size:13px;border-top:1px solid #EAEAEE;margin-top:100px}
+</style>
+</helmet>
+<div class="f" style="position:relative;height:1750px"><div class="tb"><div class="lg"><svg viewBox="0 0 28 28" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="14" r="3" fill="#111"></circle><circle cx="22" cy="6" r="3"></circle><circle cx="22" cy="22" r="3"></circle><path d="M9 13l10-6M9 15l10 6"></path></svg> Pathwisse</div><span style="margin-left:22px"></span><div class="nv"><b>Learning</b><span>Roadmaps</span><span>Community</span><span>For colleges and companies</span></div><span style="margin-left:auto"></span><button class="btn g">Sign in</button><button class="btn">Get started</button></div><div class="hh"><span class="ey"><i></i>New: AI engineer roadmap is open</span><h1>Everything an AI engineer knows. <em>Mapped.</em></h1><p>Sequenced courses from first principles to production, with hands-on tools in every lesson. Start free, no account needed.</p><div style="display:flex;gap:14px;justify-content:center;margin-top:34px"><button class="btn lg2">Open the roadmaps</button><button class="btn g lg2">Sign in</button></div><div class="mq"></div></div><div class="sec"><h2>Roadmaps</h2><p>Pick one to open it. Switch any time from the top bar.</p><div class="g2"><div class="cc"><div class="cb" style="background:#4A3CD6;display:flex;align-items:center;justify-content:center"><svg width="44" height="44" viewBox="0 0 96 96" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="20" y="20" width="56" height="56" rx="8"></rect><path d="M20 48h56M48 20v56"></path></svg></div><div style="flex:1"><b>AI engineer</b><div class="m">4 modules · 48 lessons</div><div class="w">Build and ship products that use models, retrieval and evaluation.</div><div class="ft"><span>8 free lessons</span></div></div><button class="btn g bt">Open</button></div><div class="cc"><div class="cb" style="background:#E0700F;display:flex;align-items:center;justify-content:center"><svg width="44" height="44" viewBox="0 0 96 96" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="48" r="10"></circle><circle cx="68" cy="28" r="10"></circle><circle cx="68" cy="68" r="10"></circle><path d="M37 44l22-12M37 52l22 12"></path></svg></div><div style="flex:1"><b>Forward deployed engineer</b><div class="m">4 modules · 48 lessons</div><div class="w">Take AI into customer environments: scope, integrate and hand off.</div><div class="ft"><span>8 free lessons</span></div></div><button class="btn g bt">Open</button></div><div class="cc"><div class="cb" style="background:#1E9B5C;display:flex;align-items:center;justify-content:center"><svg width="44" height="44" viewBox="0 0 96 96" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M48 16l30 17v30L48 80 18 63V33z"></path><path d="M18 33l30 17 30-17M48 50v30"></path></svg></div><div style="flex:1"><b>AI agents developer</b><div class="m">4 modules · 48 lessons</div><div class="w">Design agents that call tools and APIs, and test them properly.</div><div class="ft"><span>8 free lessons</span></div></div><button class="btn g bt">Open</button></div><div class="cc"><div class="cb" style="background:#D93A78;display:flex;align-items:center;justify-content:center"><svg width="44" height="44" viewBox="0 0 96 96" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="20" y="20" width="56" height="56" rx="8"></rect><path d="M20 48h56M48 20v56"></path></svg></div><div style="flex:1"><b>AI system design engineer</b><div class="m">4 modules · 48 lessons</div><div class="w">Design the services and operations that keep AI systems reliable.</div><div class="ft"><span>8 free lessons</span></div></div><button class="btn g bt">Open</button></div></div></div><div class="sec"><h2>How it works</h2><p>&nbsp;</p><div class="st3"><div><span class="k" style="--k:#5B4BF0">1</span><b>Open any roadmap</b><span>No account needed. Read the lessons marked FREE and try the tools.</span></div><div><span class="k" style="--k:#E0700F">2</span><b>Sign in when you want more</b><span>Save progress, open every lesson and join the community.</span></div><div><span class="k" style="--k:#1E9B5C">3</span><b>Learn, practise, build</b><span>Each topic ends with a practice, a teach-back and a project at the end of a stage.</span></div></div></div><div class="ft2"><span>© 2026 Pathwisse</span><span>Privacy · Terms · Contact</span></div></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1750}}'>
+class Component extends DCLogic { renderVals() { return {}; } }
+</script>
+</body>
+</html>
